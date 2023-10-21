@@ -1,0 +1,80 @@
+/*importing google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Libre+Baskerville&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo','Libre Baskerville', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    background-color:rgb(55, 73, 73);
+}
+.wrapper{
+    height:260px;
+    background:white;
+    max-width: 80%;
+    border-radius: 15px;
+    padding: 16px 25px;
+    transition: height 2.0s ease;
+}
+.wrapper.active{
+    height: 530px;
+}
+header h1
+{
+    font-size: 21px;
+    font-weight: 500;
+}
+header p
+{
+    margin-top: 5px;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+img{
+    width: 50%;
+    height: 50%;
+}
+.wrapper .form
+{
+    margin: 20px 0 20px;
+}
+.form :where(input,button)
+{
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.form input{
+    font-size: 18px;
+    padding: 0 17px;
+    /*border: 1px solid grey*/
+}
+.form button{
+    background:rgb(55, 73, 73);
+    color: whitesmoke;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+}
+.wrapper .qr-code{
+    padding: 33px 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
